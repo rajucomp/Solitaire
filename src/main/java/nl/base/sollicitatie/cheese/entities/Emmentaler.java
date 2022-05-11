@@ -7,7 +7,7 @@ import nl.base.sollicitatie.cheese.model.HasWebrep;
 
 public class Emmentaler extends Entity implements HasWebrep, Cheese {
 
-	private static final Log log  = new Log(Manchego.class);
+	private static final Log log  = new Log(Emmentaler.class);
 
 	double price = 34.50d;
 

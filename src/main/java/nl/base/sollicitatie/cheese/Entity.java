@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import nl.base.sollicitatie.cheese.model.Cheese;
+import nl.base.sollicitatie.cheese.model.Sausage;
 
 
 /**
@@ -65,6 +66,27 @@ public abstract class Entity extends HashMap<String, Object> {
 			for (java.util.Map.Entry<String, Entity> item : dataBase.entrySet()) {
 				if (item.getKey().startsWith(protoEntity.entityname + ":")) {
 					out.add((Cheese) item.getValue());
+				}
+			}
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return out;
+
+	}
+
+	public static List<Sausage> findAllSausage(Class<? extends Sausage> class1) {
+		List<Sausage> out = new ArrayList<>();
+		try {
+			Sausage prototype = class1.newInstance();
+			if(!(prototype instanceof Entity)) {
+				throw new IllegalStateException("Unpossible");
+			}
+			Entity protoEntity = (Entity) prototype;
+			for (java.util.Map.Entry<String, Entity> item : dataBase.entrySet()) {
+				if (item.getKey().startsWith(protoEntity.entityname + ":")) {
+					out.add((Sausage) item.getValue());
 				}
 			}
 		} catch (InstantiationException | IllegalAccessException e) {
