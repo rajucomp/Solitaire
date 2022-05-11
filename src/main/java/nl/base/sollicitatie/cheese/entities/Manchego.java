@@ -9,6 +9,8 @@ public class Manchego extends Entity implements HasWebrep, Cheese {
 
 	private static final Log log  = new Log(Manchego.class);
 
+	double price = 36.50;
+
 	public Manchego() {
 		super("manchego");
 		put("portions", 10); // Manchego cheese has 10 portions
@@ -31,7 +33,7 @@ public class Manchego extends Entity implements HasWebrep, Cheese {
 	@Override
 	public double getPrice() {
 		// TODO Auto-generated method stub
-		return 0;
+		return price;
 	}
 
 	@Override
