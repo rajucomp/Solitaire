@@ -20,7 +20,7 @@ public class ManchegoWebRep implements WebWeergave {
 	@Override
 	public double getPrice() {
 		// TODO Auto-generated method stub
-		return 25.12d;
+		return 36.50d;
 	}
 
 	@Override
