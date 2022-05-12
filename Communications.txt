@@ -1,1 +1,5 @@
 Write 'emails' / questions you would have for the product owner here.
+
+# Assumptions
+
+1) cheese and sausages are served seperately.
